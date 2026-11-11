@@ -1,0 +1,19 @@
+# Linux kernel friendly defaults: tabs are 8 columns wide.
+# `.h` is treated as C (Helix defaults to C++ for `.h`); see the note in the
+# accompanying explanation if you need C++ headers instead.
+[[language]]
+name = "c"
+file-types = ["c", "h"]
+indent = { tab-width = 8, unit = "\t" }
+rulers = [80]
+
+# Kernel assembly is GAS, not NASM; Helix otherwise maps `.S` to NASM.
+[[language]]
+name = "gas"
+file-types = ["s", "S"]
+indent = { tab-width = 8, unit = "\t" }
+
+# Device-tree files use tabs in the kernel.
+[[language]]
+name = "devicetree"
+indent = { tab-width = 8, unit = "\t" }

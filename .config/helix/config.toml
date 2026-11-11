@@ -1,0 +1,143 @@
+[theme]
+dark = "ayu_mirage"
+light = "ayu_light"
+
+[editor]
+line-number = "relative"
+mouse = false
+bufferline = "multiple"
+color-modes = true
+auto-format = true
+keymap-info = false
+idle-timeout = 0
+
+[editor.indent-guides]
+render = true
+# character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+# skip-levels = 1
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.soft-wrap]
+enable = false
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "register", "position", "file-encoding"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
+
+[keys.normal]
+"0" = "goto_line_start"
+"^" = "goto_first_nonwhitespace"
+"$" = "goto_line_end"
+H = "goto_line_start"
+L = "goto_line_end"
+M = "goto_window_center"
+G = "goto_last_line"
+C-e = "scroll_down"
+C-y = "scroll_up"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+
+C-s = ":w"
+C-p = "file_picker"
+"-" = "file_explorer"
+C-r = "redo"
+
+V = "extend_to_line_bounds"
+x = "delete_selection"
+D = "@v<end>d"
+C = "@v<end>c"
+Y = "@Vy"
+S = "@Vc"
+A-C = "copy_selection_on_next_line"
+A-c = "copy_selection_on_prev_line"
+
+"%" = "match_brackets"
+"*" = "@miwg*n"
+"#" = "@miwg*N"
+
+";" = "repeat_last_motion"
+"A-;" = "collapse_selection"
+q = "record_macro"
+Q = "replay_macro"
+"@" = "replay_macro"
+C-a = "@miwg+"
+C-x = "@miwg-"
+
+[keys.normal."["]
+b = "goto_previous_buffer"
+
+[keys.normal."]"]
+b = "goto_next_buffer"
+
+[keys.normal.g]
+"%" = "select_all"
+"*" = "search_selection_detect_word_boundaries"
+S = "split_selection"
+";" = "goto_prev_change"
+"," = "goto_next_change"
+"+" = "increment"
+"-" = "decrement"
+u = "switch_to_lowercase"
+U = "switch_to_uppercase"
+"~" = "switch_case"
+q = ":reflow"
+
+[keys.normal.z]
+z = "align_view_center"
+
+[keys.normal.Z]
+Z = ":wq"
+Q = ":q!"
+
+[keys.normal.C-w]
+c = "wclose"
+r = "rotate_view"
+R = "rotate_view_reverse"
+p = "rotate_view_reverse"
+
+[keys.insert]
+A-x = "normal_mode"
+C-c = "normal_mode"
+C-n = "completion"
+C-p = "completion"
+
+[keys.insert.j]
+k = "normal_mode"
+
+[keys.select]
+"0" = "extend_to_line_start"
+"^" = "extend_to_first_nonwhitespace"
+"$" = "extend_to_line_end"
+H = "extend_to_line_start"
+L = "extend_to_line_end"
+G = "extend_to_last_line"
+V = "extend_to_line_bounds"
+";" = "repeat_last_motion"
+"A-;" = "collapse_selection"
+C-r = "redo"
+C-s = ":w"
+C-c = "normal_mode"
+x = "delete_selection"
+D = "delete_selection"
+C = "change_selection"
+Y = "yank"
+S = "change_selection"
+u = "switch_to_lowercase"
+U = "switch_to_uppercase"
+o = "flip_selections"
