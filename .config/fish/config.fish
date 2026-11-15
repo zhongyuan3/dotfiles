@@ -5,7 +5,7 @@ end
 function fish_greeting
 end
 
-export EDITOR=vim
-export COLORTERM=truecolor
+set -gx EDITOR vi
+set -gx COLORTERM truecolor
 
 # starship init fish | source
